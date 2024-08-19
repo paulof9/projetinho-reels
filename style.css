@@ -3,6 +3,10 @@
     --secundaria: white;
     --destaque: rgb(136, 136, 136);
     --escuro: rgba(184, 184, 184, 0.274);
+    --black: black;
+    --sombraX: rgba(0, 0, 0, 0.171);
+    --cinzaInput: rgba(0, 0, 0, 0.11);
+    --vermelho: red;
     --font1: "Archivo Black", sans-serif;
     --font2: "Plus Jakarta Sans", sans-serif;
 }
@@ -29,13 +33,14 @@ body {
     box-shadow: 0.625rem 0.625rem 3.375rem 0rem rgba(0, 0, 0, 0.171);
     font-family: var(--font2);
     position: relative;
+    transition: transform 100ms ease-in-out;
 }
 
 .window::after{ /*seta*/
     position: absolute;
     width: 3.125rem;
     height: 3.125rem;
-    background-color: red;
+    background-color: var(--vermelho);
 }
 
 .login{ /*parte branca*/
@@ -119,7 +124,7 @@ body {
 .botao{
     width: 8vw;
     height: 6vh;
-    background-color: #f36944;
+    background-color: var(--primaria);
     border-radius: 2rem;
     margin: 1rem;
     border: 0.1rem solid var(--secundaria);
@@ -127,8 +132,24 @@ body {
     color: var(--secundaria);
 }
 
+.botao:hover{
+    background-color: var(--secundaria);
+    transition: 0.6s;
+    color: var(--primaria);
+    border: 0.1rem solid var(--black);
+    transform: scale(1.1);
+}
+
 #botao-entrar{
     color: var(--secundaria);
+}
+
+#botao-entrar:hover{
+    background-color: var(--secundaria);
+    transition: 0.6s;
+    color: var(--black);
+    border: 0.1rem solid var(--black);
+    transform: scale(1.1);
 }
 
 .inputs-wrapper{
@@ -139,8 +160,8 @@ body {
 }
 
 .input{
-    background-color: rgba(175, 175, 175, 0.281);
-    border: 0.1rem solid rgba(0, 0, 0, 0.11);
+    background-color: var(--escuro);
+    border: 0.1rem solid var(--cinzaInput);
     border-radius: 2rem;
     width: 15vw;
     height: 3vh;
@@ -148,15 +169,15 @@ body {
 }
 
 .fechar{ /*fundo X*/
-    background-color: rgb(255, 255, 255);
+    background-color: var(--secundaria);
     border-radius: 50%;
-    position: relative;
+    position: absolute;
     z-index: 1;
     transform: translateX(58.6vw) translateY(-28.9vh);
     color: var(--secundaria);
     text-align: center;
     padding: 0.5vw;
-    box-shadow: 0.625rem 0.625rem 1rem 0rem rgba(0, 0, 0, 0.171); /*shadow circulo*/
+    box-shadow: 0.1rem 0.1rem 1rem 0rem var(--sombraX); /*shadow circulo*/
     /*text-shadow: 0.05rem 0.05rem 0.05rem  rgb(0, 0, 0); /*shadow X*/
     color: var(--primaria);
     cursor: pointer;
@@ -164,5 +185,11 @@ body {
 
 .fechar::before{ /*X*/
     content: "";
-    position: absolute;
+    position: relative;
+}
+
+.fechar:hover{
+    background-color: var(--vermelho);
+    transition: 0.6s;
+    transform: translateX(58.6vw) translateY(-28.9vh) scale(1.1);
 }
