@@ -1,0 +1,158 @@
+:root {
+    --primaria: #f36944;
+    --secundaria: white;
+    --destaque: rgb(136, 136, 136);
+    --escuro: rgba(184, 184, 184, 0.274);
+    --font1: "Archivo Black", sans-serif;
+    --font2: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.window{ 
+    display: flex;
+    width: 60vw;
+    height: 60vh;
+    background-color: var(--secundaria);
+    margin: auto;
+    align-items: center;
+    position: relative;
+    box-shadow: 10px 10px 54px 0px rgba(0, 0, 0, 0.171);
+    font-family: var(--font2);
+}
+
+.window::after{ /*seta*/
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}
+
+.login{ /*parte branca*/
+    background-color: var(--secundaria);
+    height: 100%;
+    width: 50%;
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dizeres{ /*parte laranja*/
+    background-color: var(--primaria);
+    height: 100%;
+    width: 50%;
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.dizeres-wrapper{
+    padding: 0 2rem 0 2rem;
+}
+
+.titulo{
+    font-family: var(--font1);
+    font-size: 3rem;
+    padding: 0 0 1.6rem 0;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.507);
+}
+
+#titulo-dizeres{
+    color: var(--secundaria);
+}
+
+.redes-wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap: 1vh;
+    width: 8vw;
+    height: 4vh;
+    align-items: center;
+    position: relative;
+}
+
+.fa-brands{ /*icones redes sociais*/
+    font-size: 1rem;
+    position: relative;
+    color: var(--destaque);
+}
+
+.fa-brands::before{ /*fundo bolinhas*/
+    content: "";
+    position: absolute;
+    background-color: var(--escuro);
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-1vw) translateY(-2vh);
+}
+
+.paragrafo{
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1.5rem 1rem 1rem 1rem;
+}
+
+#paragrafo-d{
+    color: var(--secundaria);
+    padding: 1rem;
+}
+
+.botao{
+    width: 8vw;
+    height: 6vh;
+    background-color: #f36944;
+    border-radius: 2rem;
+    margin: 1rem;
+    border: 0.1rem solid var(--secundaria);
+    font-family: var(--font1);
+    color: var(--secundaria);
+}
+
+#botao-entrar{
+    color: var(--secundaria);
+}
+
+.inputs-wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.input{
+    background-color: rgba(175, 175, 175, 0.281);
+    border: 0.1rem solid rgba(0, 0, 0, 0.11);
+    border-radius: 2rem;
+    width: 15vw;
+    height: 3vh;
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+}
+
+.fechar{
+    width: 2vw;
+    height: 2vw;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.fechar .hidden{
+    display: none;
+}
