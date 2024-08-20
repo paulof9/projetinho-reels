@@ -75,6 +75,7 @@ body {
     font-size: 3rem;
     padding: 0 0 1.6rem 0;
     text-shadow: 0rem 0rem 0.313rem rgba(0, 0, 0, 0.507);
+    text-align: center;
 }
 
 #titulo-dizeres{
@@ -192,4 +193,188 @@ body {
     background-color: var(--vermelho);
     transition: 0.6s;
     transform: translateX(58.6vw) translateY(-28.9vh) scale(1.1);
+}
+
+/*media querie*/
+@media (max-width:1200px){
+    .window{ /*tela popup*/
+        width: 80vw;
+        height: 70vh;
+    }
+
+    .botao{ /*botoes*/
+        width: 20vw;
+        height: 4vh;
+        margin: 1rem;
+        font-size: 1rem;
+    }
+
+    .titulo{ 
+        font-size: 3rem;
+        padding: 0 0 1.6rem 0;
+        text-shadow: 0rem 0rem 0.313rem rgba(0, 0, 0, 0.507);
+    }
+
+    .paragrafo{
+        font-size: 1.2rem;
+        text-align: center;
+        word-spacing: 0.1rem;
+        line-height: 1;
+    }
+
+    .inputs-wrapper{ /*input nome email senha*/
+        gap: 0.7rem;
+        padding-top: 0.5rem;
+    }
+    
+    .input{
+        width: 25vw;
+        height: 2vh;
+        padding: 0.5rem 0.5rem 0.5rem 1rem;
+        font-size: 1rem;
+    }
+
+    .redes-wrapper{ /*google fb e linkedin*/
+        gap: 5.5vh;
+        width: 8vw;
+        height: 4vh;
+
+    }
+
+    .fa-brands::before{
+        transform: translateX(-4vw) translateY(-2.8vh);
+        padding: 0.7rem;
+    }
+
+    .fechar{ /*X*/
+        transform: translateX(78vw) translateY(-34vh);
+        padding: 0.7rem;
+        font-size: 0.9rem;
+    }
+    
+    .fechar:hover{
+        transform: translateX(78vw) translateY(-34vh) scale(1.1);
+    }
+}
+
+@media (max-width: 768px) {
+    .window{ /*tela popup*/
+        width: 85vw;
+        height: 70vh;
+    }
+
+    .botao{ /*botoes*/
+        width: 28vw;
+        height: 4vh;
+        margin: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .titulo{ 
+        font-size: 2rem;
+        padding: 0 0 1.6rem 0;
+        text-shadow: 0rem 0rem 0.313rem rgba(0, 0, 0, 0.507);
+    }
+
+    .dizeres-wrapper{
+        padding: 0 1rem 0 1rem;
+    }
+
+    .paragrafo{
+        font-size: 1.4rem;
+        text-align:center;
+        word-spacing: 0.1rem;
+        line-height: 1.2;
+    }
+
+    .inputs-wrapper{ /*input nome email senha*/
+        gap: 0.6rem;
+    }
+    
+    .input{
+        width: 28vw;
+        height: 2vh;
+        padding: 0.5rem 0.5rem 0.5rem 1rem;
+        font-size: 1.2rem;
+    }
+
+    .redes-wrapper{ /*google fb e linkedin*/
+        gap: 6vh;
+        width: 8vw;
+        height: 4vh;
+
+    }
+
+    .fa-brands::before{
+        transform: translateX(-8vw) translateY(-3vh);
+        padding: 1rem;
+    }
+
+    .fechar{ /*X*/
+        transform: translateX(81vw) translateY(-34vh);
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    
+    .fechar:hover{
+        transform: translateX(81vw) translateY(-34vh) scale(1.1);
+    }
+}
+
+@media (max-width: 480px) {
+    .window{ /*tela popup*/
+        width: 90vw;
+        height: 60vh;
+    }
+
+    .botao{ /*botoes*/
+        width: 28vw;
+        height: 4vh;
+        margin: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .titulo{ 
+        font-size: 2rem;
+        padding: 0 0 1.6rem 0;
+        text-shadow: 0rem 0rem 0.313rem rgba(0, 0, 0, 0.507);
+    }
+
+    .paragrafo{
+        font-size: 1rem;
+    }
+
+    .inputs-wrapper{ /*input nome email senha*/
+        gap: 0.4rem;
+    }
+    
+    .input{
+        width: 28vw;
+        height: 2vh;
+        padding: 0.5rem 0.5rem 0.5rem 1rem;
+    }
+    .redes-wrapper{ /*google fb e linkedin*/
+        display: flex;
+        justify-content: space-between;
+        gap: 4.5vh;
+        width: 8vw;
+        height: 4vh;
+        align-items: center;
+        position: relative;
+    }
+
+    .fa-brands::before{
+        transform: translateX(-8.5vw) translateY(-2vh);
+        padding: 0.8rem;
+    }
+
+    .fechar{ /*X*/
+        transform: translateX(87vw) translateY(-29.5vh);
+        padding: 0.4rem;
+        font-size: 1rem;
+    }
+    
+    .fechar:hover{
+        transform: translateX(87vw) translateY(-29.5vh) scale(1.1);
+    }
 }
