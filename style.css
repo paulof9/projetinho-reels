@@ -20,6 +20,7 @@ body {
     overflow-x: hidden;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .window{ 
@@ -27,13 +28,17 @@ body {
     width: 60vw;
     height: 60vh;
     background-color: var(--secundaria);
-    margin: auto;
+    margin: 0;
     align-items: center;
     position: relative;
     box-shadow: 0.625rem 0.625rem 3.375rem 0rem rgba(0, 0, 0, 0.171);
     font-family: var(--font2);
-    position: relative;
+    position: fixed;
     transition: transform 100ms ease-in-out;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
 }
 
 .window::after{ /*seta*/
@@ -377,4 +382,4 @@ body {
     .fechar:hover{
         transform: translateX(87vw) translateY(-29.5vh) scale(1.1);
     }
-}
+} 
