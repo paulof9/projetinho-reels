@@ -30,7 +30,6 @@ body {
     background-color: var(--secundaria);
     margin: 0;
     align-items: center;
-    position: relative;
     box-shadow: 0.625rem 0.625rem 3.375rem 0rem rgba(0, 0, 0, 0.171);
     font-family: var(--font2);
     position: fixed;
